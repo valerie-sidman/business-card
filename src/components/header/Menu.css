@@ -2,13 +2,25 @@
     Здесь хранятся правила для устройств с маленьким экраном.
     Вертикальная ориентация.
 */
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+  .menu-list {
+    display: none;
+  }
+}
 
 /* Стили для ширины, которая от 480px до 767px (включительно) 
     Здесь хранятся правила для устройств с маленьким экраном.
     Горизонтальная ориентация.
 */
-@media (min-width: 480px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 767px) {
+  .menu-list__item {
+    font-size: 18px;
+  }
+
+  .menu-list__item:nth-last-child(n+2) {
+    margin-right: 30px;
+  }
+}
 
 /* Стили для ширины, которая меньше 767px (включительно) 
     Здесь хранятся правила, которые совпадают
@@ -16,18 +28,7 @@
     устройств с маленьким экраном.
 */
 
-@media only screen and (max-width: 767px) {
-  .header {
-    margin: 30px;
-  }
-
-  .logo {
-    width: 50px;
-    height: 50px;
-
-    background-image: url(../../../src/images/logo_50x50.png);
-  }
-}
+@media only screen and (max-width: 767px) {}
 
 /* Стили для ширины, которая от 768px до 1023px (включительно) 
     Здесь хранятся правила для устройств со средним экраном.
@@ -47,15 +48,12 @@
     устройств со средним экраном.
 */
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header {
-    margin: 50px;
+  .menu-list__item {
+    font-size: 20px;
   }
 
-  .logo {
-    width: 70px;
-    height: 70px;
-
-    background-image: url(../../../src/images/logo_70x70.png);
+  .menu-list__item:nth-last-child(n+2) {
+    margin-right: 40px;
   }
 }
 
@@ -71,22 +69,16 @@
   Здесь хранятся правила для устройств с большим экраном.
 */
 @media only screen and (min-width: 1280px) {
-  .header {
-    margin: 80px;
+  .menu-list__item {
+    font-size: 30px;
   }
 
-  .logo {
-    width: 100px;
-    height: 100px;
-
-    background-image: url(../../../src/images/logo_100x100.png);
+  .menu-list__item:nth-last-child(n+2) {
+    margin-right: 70px;
   }
 }
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.menu-list__item {
+  color: #8d99ae;
 }
