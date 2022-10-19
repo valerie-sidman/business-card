@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from "redux";
+import { legacy_createStore as createStore, combineReducers} from 'redux'
 import menuButtonStateReducer from "../reducers/menuButtonStateReducer.js";
 
 function saveToLocalStorage(state) {

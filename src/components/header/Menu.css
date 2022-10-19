@@ -1,18 +1,50 @@
-/* Стили для ширины, которая меньше 479px (включительно) 
+/* Стили для ширины, которая меньше 649px (включительно) 
     Здесь хранятся правила для устройств с маленьким экраном.
     Вертикальная ориентация.
 */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 649px) {
   .menu-list {
+    display: none;
+  }
+
+  .menu-list__mobile--active {
+    position: absolute;
+    top: 115px;
+    left: 30px;
+    right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 321px;
+    padding: 70px 32px;
+
+    border-radius: 10px;
+    background-color: #edf2f4;
+    box-shadow: -14px -14px 22.5px 2.5px rgba(255, 255, 255, 1),
+      14px 14px 22.5px 2.5px rgba(43, 45, 66, 0.07);
+  }
+
+  .menu-list__item--mobile {
+    font-size: 18px;
+  }
+
+  .menu-list__item--mobile:nth-last-child(n+2) {
+    margin-bottom: 30px;
+  }
+
+  .menu-list__mobile--inactive {
     display: none;
   }
 }
 
-/* Стили для ширины, которая от 480px до 767px (включительно) 
+/* Стили для ширины, которая от 650px до 767px (включительно) 
     Здесь хранятся правила для устройств с маленьким экраном.
     Горизонтальная ориентация.
 */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 650px) and (max-width: 767px) {
   .menu-list__item {
     font-size: 18px;
   }
@@ -57,13 +89,13 @@
   }
 }
 
-/* Стили для ширины, которая больше 480px (включительно) 
+/* Стили для ширины, которая больше 650px (включительно) 
     Здесь хранятся правила, которые совпадают
     в горизонтальной ориентации устройств с маленьким экраном,
     в вертикальной, и в горизонтальной ориентации устройств со средним экраном, 
     а так же с устройствами с большим экраном.
 */
-@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: 650px) {}
 
 /* Стили для ширины, которая больше 1280px 
   Здесь хранятся правила для устройств с большим экраном.

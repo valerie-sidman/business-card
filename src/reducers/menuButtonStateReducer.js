@@ -13,7 +13,6 @@ const initialState = {
 }
 
 export default function menuButtonStateReducer(state = initialState, action) {
-  console.log('reducer');
   switch (action.type) {
     case CHANGE_TYPE_MENU_BUTTON:
       if (state.type === 'dots') {
