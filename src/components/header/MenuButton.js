@@ -1,17 +1,18 @@
 import React from 'react';
+import { useSelector, useDispatch  } from 'react-redux';
 import './MenuButton.css';
-import dotsMenuIcon from '../../../src/images/icon_dots_8x30.png';
-import crossMenuIcon from '../../../src/images/icon_close_30x30.png';
+import { changeTypeMenuButton } from '../../actions/actionCreators';
 
 export default function MenuButton() {
+  const { name, src, alt } = useSelector(state => state.serviceMenuButtonState);
+  const dispatch = useDispatch();
+  const handleChange = () => {
+    dispatch(changeTypeMenuButton());
+  }
   return (
     <React.Fragment>
-      <button className="menu-button">
-        <img
-          className="menu-button__icon--dots"
-          src={dotsMenuIcon}
-          alt="Menu icon dots"
-        />
+      <button className="menu-button" onClick={handleChange}>
+        <img className={name} src={src} alt={alt} />
       </button>
     </React.Fragment>
   )
