@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <React.Fragment>
       <MenuButton />
-      <ul className={type === 'dots' ? "menu-list .menu-list__mobile--inactive" : "menu-list menu-list__mobile--active"}>
+      <ul className={type === 'dots' ? "menu-list menu-list__mobile--inactive" : "menu-list menu-list__mobile--active"}>
         <li className="menu-list__item menu-list__item--mobile">Home</li>
         <li className="menu-list__item menu-list__item--mobile">About</li>
         <li className="menu-list__item menu-list__item--mobile">Skills and tools</li>

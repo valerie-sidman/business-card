@@ -9,6 +9,7 @@
 
   .menu-list__mobile--active {
     position: absolute;
+    z-index: 1;
     top: 115px;
     left: 30px;
     right: 30px;
