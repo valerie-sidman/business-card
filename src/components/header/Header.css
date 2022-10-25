@@ -63,16 +63,8 @@
 }
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-
-  background-image: url(../../../src/images/logo_50x50.png);
 }

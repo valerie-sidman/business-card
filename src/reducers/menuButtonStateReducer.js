@@ -6,10 +6,10 @@ import dotsMenuIcon from '../images/icon_dots_8x30.png';
 import crossMenuIcon from '../images/icon_close_30x30.png';
 
 const initialState = {
-  name: 'menu-button__icon--dots',
+  name: "menu-button__icon--dots",
   src: dotsMenuIcon,
   alt: "Menu icon dots",
-  type: 'dots'
+  type: "dots"
 }
 
 export default function menuButtonStateReducer(state = initialState, action) {
@@ -18,10 +18,10 @@ export default function menuButtonStateReducer(state = initialState, action) {
       if (state.type === 'dots') {
         return {
           ...state,
-          name: 'menu-button__icon--cross',
+          name: "menu-button__icon--cross",
           src: crossMenuIcon,
           alt: "Menu icon cross",
-          type: 'cross'
+          type: "cross"
         }
       } else {
         return initialState;

@@ -39,12 +39,80 @@
 /* Стили для ширины, которая больше 1600px 
   Здесь хранятся правила для устройств с большим экраном. 
 */
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+  .photo {
+    margin: 0 0 0 300px;
+    padding: 70px 70px 120px 0;
+    width: 500px;
+    height: 700px;
+  }
+
+  .about {
+    justify-content: space-between;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 300px 0 0;
+    padding: 100px 0 120px;
+  }
+
+  .about-title {
+    padding-bottom: 40px;
+    
+    font-size: 20px;
+  }
+
+  .about-text__first-paragraf {
+    padding-bottom: 20px;
+
+    font-size: 20px;
+  }
+
+  .about-text__subsequent-paragraf {
+    padding-bottom: 20px;
+
+    font-size: 15px;
+  }
+
+  .resume-button {
+    padding: 10px;
+    width: 230px;
+    height: 50px;
+
+    border-radius: 25px;
+    box-shadow: -7.778px -7.778px 25px 0px rgba(255, 255, 255, 0.3),
+                14.142px 14.142px 22.5px 2.5px rgba(43, 45, 66, 0.16);
+  }
+}
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
-
 .about {
+  display: flex;
+
   color: #edf2f4;
+
+  background-color: #8d99ae;
+}
+
+.resume-button-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #edf2f4;
+  letter-spacing: 4.8px;
+  font-weight: 200;
+  text-transform: uppercase;
 
   background-color: #8d99ae;
 }
