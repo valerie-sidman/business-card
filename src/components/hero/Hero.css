@@ -21,6 +21,7 @@
 */
 @media (min-width: 650px) and (max-width: 767px) {
   .hero__portret-orientation--mobile {
+    align-items: center;
     flex-direction: row;
   }
   
@@ -78,7 +79,7 @@
   }
 
   .hero-description {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     font-size: 25px;
     line-height: 25px;
@@ -91,6 +92,7 @@
 */
 @media (min-width: 1024px) and (max-width: 1599px) {
   .hero__portret-orientation--tablet {
+    align-items: center;
     flex-direction: row;
   }
 
@@ -125,12 +127,15 @@
   }
 
   .hero-title {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .hero-description {
     padding: 45px 0 25px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .hero-details {
@@ -143,34 +148,35 @@
 */
 @media only screen and (min-width: 1600px) {
   .hero {
-    margin: 0 232px;
+    align-items: center;
+    
+    margin: 0 300px;
     padding: 120px 0;
   }
 
   .hero-title {
     margin-right: 160px;
 
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 80px;
+    line-height: 80px;
   }
 
   .hero-description {
     margin-bottom: 30px;
     padding: 30px 0;
 
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .hero-details {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   color: #8d99ae;

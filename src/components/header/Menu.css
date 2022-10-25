@@ -47,11 +47,11 @@
 */
 @media (min-width: 650px) and (max-width: 767px) {
   .menu-list__item {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .menu-list__item:nth-last-child(n+2) {
-    margin-right: 30px;
+    margin-right: 20px;
   }
 }
 
@@ -69,45 +69,37 @@
 */
 @media (min-width: 768px) and (max-width: 1023px) {}
 
-/* Стили для ширины, которая от 1024px до 1279px (включительно) 
+/* Стили для ширины, которая от 1024px до 1599px (включительно) 
     Здесь хранятся правила для устройств со средним экраном.
     Горизонтальная ориентация.
 */
-@media (min-width: 1024px) and (max-width: 1279px) {}
+@media (min-width: 1024px) and (max-width: 1599px) {}
 
-/* Стили для ширины, которая от 768px до 1279px (включительно) 
+/* Стили для ширины, которая от 768px до 1599px (включительно) 
     Здесь хранятся правила, которые совпадают
     и в вертикальной, и в горизонтальной ориентации 
     устройств со средним экраном.
 */
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1599px) {
+  .menu-list__item {
+    font-size: 15px;
+  }
+
+  .menu-list__item:nth-last-child(n+2) {
+    margin-right: 20px;
+  }
+}
+
+/* Стили для ширины, которая больше 1600px 
+  Здесь хранятся правила для устройств с большим экраном.
+*/
+@media only screen and (min-width: 1600px) {
   .menu-list__item {
     font-size: 20px;
   }
 
   .menu-list__item:nth-last-child(n+2) {
     margin-right: 40px;
-  }
-}
-
-/* Стили для ширины, которая больше 650px (включительно) 
-    Здесь хранятся правила, которые совпадают
-    в горизонтальной ориентации устройств с маленьким экраном,
-    в вертикальной, и в горизонтальной ориентации устройств со средним экраном, 
-    а так же с устройствами с большим экраном.
-*/
-@media only screen and (min-width: 650px) {}
-
-/* Стили для ширины, которая больше 1280px 
-  Здесь хранятся правила для устройств с большим экраном.
-*/
-@media only screen and (min-width: 1280px) {
-  .menu-list__item {
-    font-size: 30px;
-  }
-
-  .menu-list__item:nth-last-child(n+2) {
-    margin-right: 70px;
   }
 }
 
