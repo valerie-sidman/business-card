@@ -21,20 +21,82 @@
     Здесь хранятся правила для устройств со средним экраном.
     Вертикальная ориентация.
 */
-@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about {
+    flex-direction: column;
+  }
+  
+  .photo {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-container{
+    margin: 50px 150px 0;
+  }
+
+  
+}
 
 /* Стили для ширины, которая от 1024px до 1599px (включительно) 
     Здесь хранятся правила для устройств со средним экраном.
     Горизонтальная ориентация.
 */
-@media (min-width: 1024px) and (max-width: 1599px) {}
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .photo {
+    margin: 50px 0 0 150px;
+    padding: 0 50px 0 0;
+  }
+
+  .about-container{
+    margin: 50px 150px 0 0;
+  }
+}
 
 /* Стили для ширины, которая от 768px до 1599px (включительно) 
     Здесь хранятся правила, которые совпадают 
     и в вертикальной, и в горизонтальной ориентации 
     устройств со средним экраном.
 */
-@media (min-width: 768px) and (max-width: 1599px) {}
+@media (min-width: 768px) and (max-width: 1599px) {
+  .photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-title {
+    padding-bottom: 30px;
+    
+    font-size: 18px;
+  }
+
+  .about-text__first-paragraf {
+    padding-bottom: 15px;
+
+    font-size: 18px;
+  }
+
+  .about-text__subsequent-paragraf {
+    padding-bottom: 15px;
+
+    font-size: 15px;
+  }
+
+  .resume-button-container {
+    padding: 30px 0 50px 0;
+  }
+
+  .resume-button {
+    padding: 10px;
+    width: 230px;
+    height: 50px;
+
+    border-radius: 25px;
+    box-shadow: -7.778px -7.778px 25px 0px rgba(255, 255, 255, 0.3),
+                14.142px 14.142px 22.5px 2.5px rgba(43, 45, 66, 0.16);
+  }
+}
 
 /* Стили для ширины, которая больше 1600px 
   Здесь хранятся правила для устройств с большим экраном. 
@@ -43,12 +105,7 @@
   .photo {
     margin: 0 0 0 300px;
     padding: 70px 70px 120px 0;
-    width: 500px;
-    height: 700px;
-  }
-
-  .about {
-    justify-content: space-between;
+    max-height: 500px;
   }
 
   .about-container {
@@ -57,7 +114,7 @@
     justify-content: space-between;
 
     margin: 0 300px 0 0;
-    padding: 100px 0 120px;
+    padding: 70px 0 120px;
   }
 
   .about-title {
@@ -92,10 +149,13 @@
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
 .about {
   display: flex;
-
   color: #edf2f4;
 
   background-color: #8d99ae;
+}
+
+.about-text {
+  text-align: justify;
 }
 
 .resume-button-container {
