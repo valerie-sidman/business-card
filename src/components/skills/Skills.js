@@ -5,6 +5,9 @@ import certificates from '../../data/certificates.json';
 
 export default function Skills() {
   console.log(certificates);
+  // записать в стейт window.innerWidth, затем вызвать листнер
+  window.addEventListener('resize', () => console.log('Width - ', window.innerWidth,
+      'Height - ', window.innerHeight));
   return (
     <React.Fragment>
       <div className="skills">
