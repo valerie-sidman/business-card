@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
 import './Header.css';
-import logo from '../../../src/images/logo_50x50.png';
+import logo from '../../images/logo_50x50.png';
 
 export default function Header() {
   return (

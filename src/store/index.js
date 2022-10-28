@@ -1,5 +1,6 @@
 import { legacy_createStore as createStore, combineReducers} from 'redux'
 import menuButtonStateReducer from "../reducers/menuButtonStateReducer.js";
+import skillsReducer from "../reducers/skillsReducer.js";
 
 function saveToLocalStorage(state) {
   try {
@@ -23,6 +24,7 @@ function loadFromLocalStorage() {
 
 const reducer = combineReducers({
   serviceMenuButtonState: menuButtonStateReducer,
+  serviceSkillsState: skillsReducer,
 })
 
 const store = createStore(
