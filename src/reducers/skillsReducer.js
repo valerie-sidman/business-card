@@ -1,20 +1,22 @@
 import {
-  SCROLLING_SKILL_LIST_ITEMS
+  SCROLLING_SKILL_LIST_ITEMS,
+  TRACKING_WINDOW_WIDTH
 } from '../actions/actionTypes';
 import certificates from '../data/certificates.json';
 
-const certificatesArray = JSON.parse(certificates);
+const certificatesArray = JSON.parse(JSON.stringify(certificates));
+console.log(certificatesArray)
 const initialState = {
-  windowWeight: 0,
+  windowWidth: 0,
   skillsIdList: [],
-  start: true, // находимся в начале массива с сертификатами - переделать
-  end: false // находимся в конце массива с сертификатами - переделать
+  start: true,
+  end: false
 }
 
 export default function skillsReducer(state = initialState, action) {
   switch (action.type) {
     case SCROLLING_SKILL_LIST_ITEMS:
-      const {direction} = action.payload;
+      const { direction } = action.payload;
       const newSkillsIdList = state.skillsIdList;
       const lastElementIndex = newSkillsIdList.length - 1;
       if (direction === "forth" && newSkillsIdList[lastElementIndex] < certificatesArray.length) {
@@ -32,13 +34,26 @@ export default function skillsReducer(state = initialState, action) {
           end: true
         }
       }
-      else if (direction === "back") {
-        // доработать
+      if (direction === "back" && newSkillsIdList[lastElementIndex] > 1) {
+        newSkillsIdList.unshift(newSkillsIdList[lastElementIndex] - 1);
         newSkillsIdList.pop();
-        newSkillsIdList.unshift();
         return {
           ...state, skillsIdList: newSkillsIdList,
+          start: false,
+          end: false
         }
+      } else if (direction === "back" && newSkillsIdList[lastElementIndex] <= 1) {
+        return {
+          ...state,
+          start: true
+        }
+      }
+      break;
+    case TRACKING_WINDOW_WIDTH:
+      const { windowWidth } = action.payload;
+      return {
+        ...state,
+        windowWidth: windowWidth
       }
       break;
     default:
