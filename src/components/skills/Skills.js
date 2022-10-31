@@ -1,26 +1,42 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch  } from 'react-redux';
+import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import './Skills.css';
 import arrow from '../../images/arrow_8x11.png';
-import { scrollingSkillListItems, trackingWindowWidth } from '../../actions/actionCreators';
+import {scrollingSkillListItems, addSkillItemId, trackingWindowWidth} from '../../actions/actionCreators';
 import certificates from '../../data/certificates.json';
 
 export default function Skills() {
-  const { windowWidth, skillsIdList, start, end } = useSelector(state => state.serviceSkillsState);
+  const {windowWidth, skillsIdList} = useSelector(state => state.serviceSkillsState);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(trackingWindowWidth(window.innerWidth));
     window.addEventListener('resize', () => dispatch(trackingWindowWidth(window.innerWidth)));
-  }, [dispatch]);
 
+    let certificatesForShow;
+
+    if (window.innerWidth >= 1600) {
+      certificatesForShow = certificates.slice(0, 4);
+    } else if (window.innerWidth >= 1024 && window.innerWidth <= 1599) {
+      certificatesForShow = certificates.slice(0, 3);
+    } else if (window.innerWidth >= 650 && window.innerWidth <= 1023) {
+      certificatesForShow = certificates.slice(0, 2);
+    } else if (window.innerWidth <= 649) {
+      certificatesForShow = certificates.slice(0, 1);
+    }
+
+    if (certificatesForShow.length !== skillsIdList.length) {
+      dispatch(addSkillItemId(certificatesForShow.map((certificate) => certificate.id)));
+    }
+
+  }, [dispatch, windowWidth, skillsIdList]);
 
   const handleScrollBack = () => {
     dispatch(scrollingSkillListItems("back"));
   }
   const handleScrollForth = () => {
+    console.log('click')
     dispatch(scrollingSkillListItems("forth"));
   }
-  // console.log(certificates);
 
   return (
     <React.Fragment>
@@ -28,17 +44,19 @@ export default function Skills() {
         <h2 className="skills-title">Skills and tools</h2>
         <div className="skills-container">
           <button className="skills-button__back" onClick={handleScrollBack}>
-            <img className="skills-image__arrow--back" src={arrow} alt="Иконка стрелочки назад" />
+            <img className="skills-image__arrow--back" src={arrow} alt="Иконка стрелочки назад"/>
           </button>
           <ul className="skills-list">
-            {/* {.map( =>
-              <li className="" key={}>
-                <a className="" href="/#"></a>
-              </li>
-            )} */}
+            {skillsIdList.map((skillId) => {
+                const foundCertificate = certificates.find((certificate) => certificate.id === skillId);
+                return (<li key={foundCertificate.id}>
+                  <a href={foundCertificate.link}>{foundCertificate.title}</a>
+                </li>)
+              }
+            )}
           </ul>
           <button className="skills-button__forth" onClick={handleScrollForth}>
-            <img className="skills-image__arrow--forth" src={arrow} alt="Иконка стрелочки вперед" />
+            <img className="skills-image__arrow--forth" src={arrow} alt="Иконка стрелочки вперед"/>
           </button>
         </div>
       </div>

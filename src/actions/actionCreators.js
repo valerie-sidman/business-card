@@ -1,6 +1,7 @@
 import {
   CHANGE_TYPE_MENU_BUTTON,
   SCROLLING_SKILL_LIST_ITEMS,
+  ADD_SKILL_ITEM_ID,
   TRACKING_WINDOW_WIDTH
 } from './actionTypes';
 
@@ -18,6 +19,15 @@ export function scrollingSkillListItems(direction) {
   return {
     type: SCROLLING_SKILL_LIST_ITEMS,
     payload: { direction }
+  }
+}
+
+// Add skill item id
+
+export function addSkillItemId(updatedSkillsIdList) {
+  return {
+    type: ADD_SKILL_ITEM_ID,
+    payload: { updatedSkillsIdList }
   }
 }
 
