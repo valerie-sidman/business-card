@@ -57,8 +57,6 @@ export default function skillsReducer(state = initialState, action) {
       }
     case TRACKING_WINDOW_WIDTH:
       const { windowWidth } = action.payload;
-      console.log('in reducer', windowWidth)
-
       return {
         ...state,
         windowWidth: windowWidth

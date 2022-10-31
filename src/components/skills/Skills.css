@@ -2,39 +2,45 @@
     Здесь хранятся правила для устройств с маленьким экраном.
     Вертикальная ориентация. 
 */
-@media only screen and (max-width: 649px) {}
+@media only screen and (max-width: 649px) {
+}
 
 /* Стили для ширины, которая от 650px до 767px (включительно) 
     Здесь хранятся правила для устройств с маленьким экраном.
     Горизонтальная ориентация. 
 */
-@media (min-width: 650px) and (max-width: 767px) {}
+@media (min-width: 650px) and (max-width: 767px) {
+}
 
 /* Стили для ширины, которая меньше 767px (включительно) 
     Здесь хранятся правила, которые совпадают
     и в вертикальной, и в горизонтальной ориентации 
     устройств с маленьким экраном.
 */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+}
 
 /* Стили для ширины, которая от 768px до 1023px (включительно) 
     Здесь хранятся правила для устройств со средним экраном.
     Вертикальная ориентация.
 */
-@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
 
 /* Стили для ширины, которая от 1024px до 1599px (включительно) 
     Здесь хранятся правила для устройств со средним экраном.
     Горизонтальная ориентация.
 */
-@media (min-width: 1024px) and (max-width: 1599px) {}
+@media (min-width: 1024px) and (max-width: 1599px) {
+}
 
 /* Стили для ширины, которая от 768px до 1599px (включительно) 
     Здесь хранятся правила, которые совпадают 
     и в вертикальной, и в горизонтальной ориентации 
     устройств со средним экраном.
 */
-@media (min-width: 768px) and (max-width: 1599px) {}
+@media (min-width: 768px) and (max-width: 1599px) {
+}
 
 /* Стили для ширины, которая больше 1600px 
   Здесь хранятся правила для устройств с большим экраном. 
@@ -49,6 +55,9 @@
   }
 
   .skills-container {
+    display: flex;
+    align-items: center;
+
     margin: 100px 0 115px;
   }
 
@@ -56,6 +65,36 @@
   .skills-button__forth {
     width: 40px;
     height: 40px;
+  }
+
+  .skills-list {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0 100px;
+    width: 100%;
+  }
+
+  /*noinspection CssNonIntegerLengthInPixels*/
+  .skills-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 250px;
+
+    text-align: center;
+
+    border-radius: 10px;
+    background-color: #edf2f4;
+    box-shadow: inset -14.142px -14.142px 22.5px 2.5px #ffffff,
+    inset 14.142px 14.142px 22.5px 2.5px rgba(43, 45, 66, 0.07);
+  }
+
+  .skills-list__item-link {
+    padding: 0 15px;
   }
 }
 
@@ -78,7 +117,7 @@
   border-radius: 10px;
   background-color: #edf2f4;
   box-shadow: -14px -14px 22.5px 2.5px rgba(255, 255, 255, 1),
-    14px 14px 22.5px 2.5px rgba(43, 45, 66, 0.07);
+  14px 14px 22.5px 2.5px rgba(43, 45, 66, 0.07);
 }
 
 .skills-image__arrow--back,
@@ -86,6 +125,9 @@
   opacity: 0.3;
 }
 
+.skills-list__item-link {
+  font-size: 15px;
+}
 
 .skills-image__arrow--forth {
   transform: rotate(180deg);

@@ -34,7 +34,6 @@ export default function Skills() {
     dispatch(scrollingSkillListItems("back"));
   }
   const handleScrollForth = () => {
-    console.log('click')
     dispatch(scrollingSkillListItems("forth"));
   }
 
@@ -49,8 +48,8 @@ export default function Skills() {
           <ul className="skills-list">
             {skillsIdList.map((skillId) => {
                 const foundCertificate = certificates.find((certificate) => certificate.id === skillId);
-                return (<li key={foundCertificate.id}>
-                  <a href={foundCertificate.link}>{foundCertificate.title}</a>
+                return (<li className="skills-list__item" key={foundCertificate.id}>
+                  <a className="skills-list__item-link" href={foundCertificate.link}>{foundCertificate.title}</a>
                 </li>)
               }
             )}
