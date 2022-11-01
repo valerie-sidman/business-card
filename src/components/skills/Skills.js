@@ -28,7 +28,7 @@ export default function Skills() {
       dispatch(addSkillItemId(certificatesForShow.map((certificate) => certificate.id)));
     }
 
-  }, [dispatch, windowWidth, skillsIdList]);
+  }, [dispatch, windowWidth, skillsIdList, start, end]);
 
   const handleScrollBack = () => {
     dispatch(scrollingSkillListItems("back"));
