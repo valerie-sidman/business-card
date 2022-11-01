@@ -3,8 +3,8 @@
     Вертикальная ориентация. 
 */
 @media only screen and (max-width: 649px) {
-  .skills-container {
-    justify-content: space-evenly;
+  .skills-list__item {
+    margin: 0 20px;
   }
 }
 
@@ -13,10 +13,6 @@
     Горизонтальная ориентация. 
 */
 @media (min-width: 650px) and (max-width: 767px) {
-  .skills-container {
-    justify-content: center;
-  }
-
   .skills-list__item {
     margin: 0 0 0 10px;
   }
@@ -33,6 +29,8 @@
 */
 @media only screen and (max-width: 767px) {
   .skills {
+    align-items: center;
+
     margin: 55px 30px 0;
   }
 
@@ -55,10 +53,6 @@
     Вертикальная ориентация.
 */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .skills-container {
-    justify-content: space-evenly;
-  }
-
   .skills-list__item {
     margin: 0 0 0 10px;
     width: 150px;
@@ -75,10 +69,6 @@
     Горизонтальная ориентация.
 */
 @media (min-width: 1024px) and (max-width: 1599px) {
-  .skills-container {
-    justify-content: center;
-  }
-
   .skills-list__item {
     margin: 0 0 0 10px;
     width: 200px;
@@ -97,7 +87,8 @@
 */
 @media (min-width: 768px) and (max-width: 1599px) {
   .skills {
-    margin: 75px 150px 0;
+    align-items: center;
+    margin: 75px 0 0 0;
   }
 
   .skills-title {
@@ -114,7 +105,8 @@
 */
 @media only screen and (min-width: 1600px) {
   .skills {
-    margin: 115px 300px 0;
+    align-items: center;
+    margin: 115px 0 0 0;
   }
 
   .skills-title {
@@ -122,8 +114,6 @@
   }
 
   .skills-container {
-    justify-content: center;
-
     margin: 100px 0 115px;
   }
 
@@ -136,6 +126,18 @@
   .skills-list__item:last-child {
     margin: 0 20px;
   }
+
+  /*noinspection CssNonIntegerLengthInPixels*/
+  .skills-progress-bar-container {
+    margin-bottom: 115px;
+    width: 1000px;
+    height: 20px;
+
+    border-radius: 15px;
+    background-color: #edf2f4;
+    box-shadow: -14.142px -14.142px 22.5px 2.5px #ffffff,
+    14.142px 14.142px 22.5px 2.5px rgba(43, 45, 66, 0.07);
+  }
 }
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
@@ -147,6 +149,11 @@
   100% {
     opacity: 1;
   }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-title {

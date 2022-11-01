@@ -63,7 +63,9 @@ export default function skillsReducer(state = initialState, action) {
       const {updatedSkillsIdList} = action.payload;
       return {
         ...state,
-        skillsIdList: updatedSkillsIdList
+        skillsIdList: updatedSkillsIdList,
+        start: true,
+        end: false
       }
     case TRACKING_WINDOW_WIDTH:
       const {windowWidth} = action.payload;

@@ -58,6 +58,9 @@ export default function Skills() {
             <img className={end ? "skills-image__arrow--forth disable" : "skills-image__arrow--forth"} src={arrow} alt="Иконка стрелочки вперед"/>
           </button>
         </div>
+        <div className="skills-progress-bar-container">
+          <div className="skills-progress-bar-content"></div>
+        </div>
       </div>
     </React.Fragment>
   )
