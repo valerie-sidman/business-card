@@ -6,7 +6,7 @@ import {scrollingSkillListItems, addSkillItemId, trackingWindowWidth} from '../.
 import certificates from '../../data/certificates.json';
 
 export default function Skills() {
-  const {windowWidth, skillsIdList} = useSelector(state => state.serviceSkillsState);
+  const {windowWidth, skillsIdList, start, end} = useSelector(state => state.serviceSkillsState);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(trackingWindowWidth(window.innerWidth));
@@ -43,7 +43,7 @@ export default function Skills() {
         <h2 className="skills-title">Skills and tools</h2>
         <div className="skills-container">
           <button className="skills-button__back" onClick={handleScrollBack}>
-            <img className="skills-image__arrow--back" src={arrow} alt="Иконка стрелочки назад"/>
+            <img className={start ? "skills-image__arrow--back disable" : "skills-image__arrow--back"} src={arrow} alt="Иконка стрелочки назад"/>
           </button>
           <ul className="skills-list">
             {skillsIdList.map((skillId) => {
@@ -55,7 +55,7 @@ export default function Skills() {
             )}
           </ul>
           <button className="skills-button__forth" onClick={handleScrollForth}>
-            <img className="skills-image__arrow--forth" src={arrow} alt="Иконка стрелочки вперед"/>
+            <img className={end ? "skills-image__arrow--forth disable" : "skills-image__arrow--forth"} src={arrow} alt="Иконка стрелочки вперед"/>
           </button>
         </div>
       </div>

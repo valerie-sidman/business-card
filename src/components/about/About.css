@@ -39,13 +39,13 @@
     font-size: 15px;
   }
 
-  .about-text__first-paragraf {
+  .about-text__first-paragraph {
     padding-bottom: 15px;
 
     font-size: 15px;
   }
 
-  .about-text__subsequent-paragraf {
+  .about-text__subsequent-paragraph {
     padding-bottom: 15px;
 
     font-size: 13px;
@@ -118,13 +118,13 @@
     font-size: 18px;
   }
 
-  .about-text__first-paragraf {
+  .about-text__first-paragraph {
     padding-bottom: 15px;
 
     font-size: 18px;
   }
 
-  .about-text__subsequent-paragraf {
+  .about-text__subsequent-paragraph {
     padding-bottom: 15px;
 
     font-size: 15px;
@@ -170,13 +170,13 @@
     font-size: 20px;
   }
 
-  .about-text__first-paragraf {
+  .about-text__first-paragraph {
     padding-bottom: 20px;
 
     font-size: 20px;
   }
 
-  .about-text__subsequent-paragraf {
+  .about-text__subsequent-paragraph {
     padding-bottom: 20px;
 
     font-size: 15px;
@@ -215,6 +215,7 @@
   justify-content: flex-end;
 }
 
+/*noinspection CssNonIntegerLengthInPixels*/
 .resume-button {
   display: flex;
   justify-content: center;

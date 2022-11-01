@@ -3,6 +3,9 @@
     Вертикальная ориентация. 
 */
 @media only screen and (max-width: 649px) {
+  .skills-container {
+    justify-content: space-evenly;
+  }
 }
 
 /* Стили для ширины, которая от 650px до 767px (включительно) 
@@ -10,6 +13,17 @@
     Горизонтальная ориентация. 
 */
 @media (min-width: 650px) and (max-width: 767px) {
+  .skills-container {
+    justify-content: center;
+  }
+
+  .skills-list__item {
+    margin: 0 0 0 10px;
+  }
+
+  .skills-list__item:last-child {
+    margin: 0 10px;
+  }
 }
 
 /* Стили для ширины, которая меньше 767px (включительно) 
@@ -18,6 +32,22 @@
     устройств с маленьким экраном.
 */
 @media only screen and (max-width: 767px) {
+  .skills {
+    margin: 55px 30px 0;
+  }
+
+  .skills-title {
+    font-size: 15px;
+  }
+
+  .skills-container {
+    margin: 45px 0;
+  }
+
+  .skills-list__item {
+    width: 200px;
+    height: 250px;
+  }
 }
 
 /* Стили для ширины, которая от 768px до 1023px (включительно) 
@@ -25,6 +55,19 @@
     Вертикальная ориентация.
 */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .skills-container {
+    justify-content: space-evenly;
+  }
+
+  .skills-list__item {
+    margin: 0 0 0 10px;
+    width: 150px;
+    height: 200px;
+  }
+
+  .skills-list__item:last-child {
+    margin: 0 10px;
+  }
 }
 
 /* Стили для ширины, которая от 1024px до 1599px (включительно) 
@@ -32,6 +75,19 @@
     Горизонтальная ориентация.
 */
 @media (min-width: 1024px) and (max-width: 1599px) {
+  .skills-container {
+    justify-content: center;
+  }
+
+  .skills-list__item {
+    margin: 0 0 0 10px;
+    width: 200px;
+    height: 250px;
+  }
+
+  .skills-list__item:last-child {
+    margin: 0 10px;
+  }
 }
 
 /* Стили для ширины, которая от 768px до 1599px (включительно) 
@@ -40,6 +96,17 @@
     устройств со средним экраном.
 */
 @media (min-width: 768px) and (max-width: 1599px) {
+  .skills {
+    margin: 75px 150px 0;
+  }
+
+  .skills-title {
+    font-size: 18px;
+  }
+
+  .skills-container {
+    margin: 65px 0;
+  }
 }
 
 /* Стили для ширины, которая больше 1600px 
@@ -55,50 +122,32 @@
   }
 
   .skills-container {
-    display: flex;
-    align-items: center;
+    justify-content: center;
 
     margin: 100px 0 115px;
   }
 
-  .skills-button__back,
-  .skills-button__forth {
-    width: 40px;
-    height: 40px;
-  }
-
-  .skills-list {
-    display: flex;
-    justify-content: space-around;
-
-    margin: 0 100px;
-    width: 100%;
-  }
-
-  /*noinspection CssNonIntegerLengthInPixels*/
   .skills-list__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
+    margin: 0 0 0 20px;
     width: 200px;
     height: 250px;
-
-    text-align: center;
-
-    border-radius: 10px;
-    background-color: #edf2f4;
-    box-shadow: inset -14.142px -14.142px 22.5px 2.5px #ffffff,
-    inset 14.142px 14.142px 22.5px 2.5px rgba(43, 45, 66, 0.07);
   }
 
-  .skills-list__item-link {
-    padding: 0 15px;
+  .skills-list__item:last-child {
+    margin: 0 20px;
   }
 }
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
+
+@keyframes carousel {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .skills-title {
   text-align: center;
@@ -108,12 +157,15 @@
 
 .skills-container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 /*noinspection CssNonIntegerLengthInPixels*/
 .skills-button__back,
 .skills-button__forth {
+  width: 40px;
+  height: 40px;
+
   border-radius: 10px;
   background-color: #edf2f4;
   box-shadow: -14px -14px 22.5px 2.5px rgba(255, 255, 255, 1),
@@ -125,15 +177,38 @@
   opacity: 0.3;
 }
 
-.skills-list__item-link {
-  font-size: 15px;
-}
-
 .skills-image__arrow--forth {
   transform: rotate(180deg);
 }
 
 .skills-list {
+  justify-content: center;
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+.skills-list__item {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 10px;
+  background-color: #edf2f4;
+  box-shadow: inset -14.142px -14.142px 22.5px 2.5px #ffffff,
+  inset 14.142px 14.142px 22.5px 2.5px rgba(43, 45, 66, 0.07);
+
+  opacity: 0;
+  animation: carousel 1.5s forwards;
+}
+
+.skills-list__item-link {
+  padding: 0 15px;
+
+  font-size: 15px;
+}
+
+.disable {
+  opacity: 0.1;
 }
