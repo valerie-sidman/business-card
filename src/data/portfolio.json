@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Chaos. Приложение-органайзер",
+    "description": "Учебный проект",
+    "link": "https://github.com/valerie-sidman/chaos-frontend",
+    "month": "Сентябрь",
+    "year": "2021"
+  },
+  {
+    "id": 2,
+    "title": "Сайт бронирования билетов в кино",
+    "description": "Учебный проект",
+    "link": "https://github.com/valerie-sidman/booking-service-front",
+    "month": "Февраль",
+    "year": "2022"
+  },
+  {
+    "id": 3,
+    "title": "Сайт-визитка",
+    "description": "Личный проект",
+    "link": "https://github.com/valerie-sidman/business-card",
+    "month": "Декабрь",
+    "year": "2022"
+  },
+  {
+    "id": 4,
+    "title": "Нетология. Домашние задания",
+    "description": "Учебные проекты",
+    "link": "https://github.com/valerie-sidman?tab=repositories",
+    "month": "Апрель - Февраль",
+    "year": "2020 - 2022"
+  }
+]

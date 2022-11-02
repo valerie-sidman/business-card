@@ -1,0 +1,135 @@
+/* Стили для ширины, которая меньше 649px (включительно)
+    Здесь хранятся правила для устройств с маленьким экраном.
+    Вертикальная ориентация.
+*/
+@media only screen and (max-width: 649px) {}
+
+/* Стили для ширины, которая от 650px до 767px (включительно)
+    Здесь хранятся правила для устройств с маленьким экраном.
+    Горизонтальная ориентация.
+*/
+@media (min-width: 650px) and (max-width: 767px) {}
+
+/* Стили для ширины, которая меньше 767px (включительно)
+    Здесь хранятся правила, которые совпадают
+    и в вертикальной, и в горизонтальной ориентации
+    устройств с маленьким экраном.
+*/
+@media only screen and (max-width: 767px) {
+  .portfolio {
+    margin: 0 50px;
+  }
+
+  .portfolio-title {
+    margin: 45px 0 55px 0;
+  }
+
+  .portfolio-title,
+  .portfolio-list__item--text-title {
+    font-size: 15px;
+  }
+}
+
+/* Стили для ширины, которая от 768px до 1023px (включительно)
+    Здесь хранятся правила для устройств со средним экраном.
+    Вертикальная ориентация.
+*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .portfolio {
+    margin: 0 130px;
+  }
+}
+
+/* Стили для ширины, которая от 1024px до 1599px (включительно)
+    Здесь хранятся правила для устройств со средним экраном.
+    Горизонтальная ориентация.
+*/
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .portfolio {
+    margin: 0 250px;
+  }
+}
+
+/* Стили для ширины, которая от 768px до 1599px (включительно)
+    Здесь хранятся правила, которые совпадают
+    и в вертикальной, и в горизонтальной ориентации
+    устройств со средним экраном.
+*/
+@media (min-width: 768px) and (max-width: 1599px) {
+  .portfolio-title {
+    margin: 75px 0 65px 0;
+  }
+
+  .portfolio-title,
+  .portfolio-list__item--text-title {
+    font-size: 18px;
+  }
+}
+
+/* Стили для ширины, которая больше 1600px
+  Здесь хранятся правила для устройств с большим экраном.
+*/
+@media only screen and (min-width: 1600px) {
+  .portfolio {
+    margin: 0 400px;
+  }
+
+  .portfolio-title {
+    margin: 0 0 100px 0;
+  }
+
+  .portfolio-title,
+  .portfolio-list__item--text-title {
+    font-size: 20px;
+  }
+}
+
+/* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
+.portfolio {
+  color: #8d99ae;
+}
+
+.portfolio-title {
+  text-align: center;
+
+  font-weight: 400;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-list__item {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.portfolio-list__item--text-container {
+  color: #8d99ae;
+}
+
+.portfolio-list__item--icon-github {
+  opacity: 0.3;
+}
+
+.portfolio-list__item:nth-child(n+2) {
+  margin-top: 50px;
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+.portfolio-list__item--text-title {
+  margin-bottom: 15px;
+
+  letter-spacing: 1.6px;
+  font-weight: 800;
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+.portfolio-list__item--text-details {
+  font-size: 15px;
+  letter-spacing: 4.8px;
+  font-weight: 200;
+  text-transform: lowercase;
+}

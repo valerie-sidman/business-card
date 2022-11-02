@@ -31,7 +31,7 @@ button {
   cursor: pointer;
 }
 
-p, h1, h2 {
+p, h1, h2, h3 {
   margin: 0;
 }
 
@@ -40,5 +40,6 @@ a:hover,
 a {
   text-decoration: none;
   color: #8d99ae;
+  cursor: pointer;
 }
 
