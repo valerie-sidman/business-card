@@ -6,7 +6,6 @@ import {
 } from './actionTypes';
 
 // Menu button
-
 export function changeTypeMenuButton() {
   return {
     type: CHANGE_TYPE_MENU_BUTTON,
@@ -14,7 +13,6 @@ export function changeTypeMenuButton() {
 }
 
 // Scrolling skill list items
-
 export function scrollingSkillListItems(direction) {
   return {
     type: SCROLLING_SKILL_LIST_ITEMS,
@@ -23,7 +21,6 @@ export function scrollingSkillListItems(direction) {
 }
 
 // Add skill item id
-
 export function addSkillItemId(updatedSkillsIdList) {
   return {
     type: ADD_SKILL_ITEM_ID,
@@ -32,7 +29,6 @@ export function addSkillItemId(updatedSkillsIdList) {
 }
 
 // Tracking window width
-
 export function trackingWindowWidth(windowWidth) {
   return {
     type: TRACKING_WINDOW_WIDTH,
