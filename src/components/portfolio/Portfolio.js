@@ -20,7 +20,7 @@ export default function Portfolio() {
                     <span className="portfolio-list__item--text-details-year">{project.year}</span>
                   </div>
                 </div>
-                <a className="portfolio-list__item--link-github" href={project.link}>
+                <a rel="noopener noreferrer" href={project.link} target="_blank" className="portfolio-list__item--link-github"  >
                   <img className="portfolio-list__item--icon-github" src={github} alt="Иконка GitHub"/>
                 </a>
               </li>
