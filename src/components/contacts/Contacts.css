@@ -1,0 +1,176 @@
+/* Стили для ширины, которая меньше 649px (включительно)
+    Здесь хранятся правила для устройств с маленьким экраном.
+    Вертикальная ориентация.
+*/
+@media only screen and (max-width: 649px) {}
+
+/* Стили для ширины, которая от 650px до 767px (включительно)
+    Здесь хранятся правила для устройств с маленьким экраном.
+    Горизонтальная ориентация.
+*/
+@media (min-width: 650px) and (max-width: 767px) {}
+
+/* Стили для ширины, которая меньше 767px (включительно)
+    Здесь хранятся правила, которые совпадают
+    и в вертикальной, и в горизонтальной ориентации
+    устройств с маленьким экраном.
+*/
+@media only screen and (max-width: 767px) {
+  .contacts {
+    margin: 45px 0 0 0;
+  }
+
+  .contacts-title {
+    margin: 0 0 55px 0;
+  }
+
+  .contacts-title,
+  .contacts-container {
+    font-size: 15px;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 300px;
+    padding: 80px 50px;
+  }
+
+  .contacts-text__information--ways {
+    margin-bottom: 15px;
+  }
+
+  .contacts-text__list-details-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+/* Стили для ширины, которая от 768px до 1023px (включительно)
+    Здесь хранятся правила для устройств со средним экраном.
+    Вертикальная ориентация.
+*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contacts-container {
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 300px;
+  }
+
+  .contacts-text__information--ways {
+    margin-bottom: 15px;
+  }
+
+  .contacts-text__list-details-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+/* Стили для ширины, которая от 1024px до 1599px (включительно)
+    Здесь хранятся правила для устройств со средним экраном.
+    Горизонтальная ориентация.
+*/
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .contacts-container {
+    justify-content: space-between;
+
+    height: 200px;
+
+    font-size: 15px;
+  }
+}
+
+/* Стили для ширины, которая от 768px до 1599px (включительно)
+    Здесь хранятся правила, которые совпадают
+    и в вертикальной, и в горизонтальной ориентации
+    устройств со средним экраном.
+*/
+@media (min-width: 768px) and (max-width: 1599px) {
+  .contacts {
+    margin: 75px 0 0 0;
+  }
+
+  .contacts-title {
+    margin: 0 0 65px 0;
+
+    font-size: 18px;
+  }
+
+  .contacts-container {
+    padding: 80px 130px;
+
+    font-size: 15px;
+  }
+}
+
+/* Стили для ширины, которая больше 1600px
+  Здесь хранятся правила для устройств с большим экраном.
+*/
+@media only screen and (min-width: 1600px) {
+  .contacts {
+    margin: 115px 0 0 0;
+  }
+
+  .contacts-title {
+    margin: 0 0 100px 0;
+
+    font-size: 20px;
+  }
+
+  .contacts-container {
+    justify-content: space-between;
+
+    padding: 80px 400px;
+    height: 200px;
+
+    font-size: 15px;
+  }
+}
+
+/* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
+.contacts-title {
+  color: #8d99ae;
+  text-align: center;
+
+  font-weight: 400;
+}
+
+.contacts-container {
+  display: flex;
+
+  color: #edf2f4;
+
+  background-color: #8d99ae;
+}
+
+.contacts-text__information,
+.contacts-text__list-details,
+.contacts-text__list-details-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-text__information,
+.contacts-text__list-details {
+  justify-content: space-between;
+}
+
+.contacts-text__list-details {
+  align-items: end;
+
+  text-align: end;
+}
+
+/*noinspection CssNonIntegerLengthInPixels*/
+.contacts-text__list-details-item__title {
+  margin-bottom: 5px;
+
+  letter-spacing: 4.8px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.contacts-text__list-details-item__info {
+  cursor: copy;
+}
