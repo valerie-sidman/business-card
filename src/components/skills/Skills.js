@@ -50,7 +50,7 @@ export default function Skills() {
             {skillsIdList.map((skillId) => {
                 const foundCertificate = certificates.find((certificate) => certificate.id === skillId);
                 return (<li className="skills-list__item" key={foundCertificate.id}>
-                  <a className="skills-list__item-link" href={foundCertificate.link}>{foundCertificate.title}</a>
+                  <a rel="noopener noreferrer" href={foundCertificate.link} target="_blank" className="skills-list__item-link" >{foundCertificate.title}</a>
                 </li>)
               }
             )}
@@ -62,6 +62,7 @@ export default function Skills() {
         </div>
         <div className="skills-progress-bar-container">
           <div
+            id="portfolio-anchor"
             className="skills-progress-bar-content"
             style={
             {

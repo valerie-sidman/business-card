@@ -18,7 +18,7 @@
 
 @media only screen and (max-width: 767px) {
   .header {
-    margin: 30px 30px 0;
+    padding: 30px 30px;
   }
 }
 
@@ -41,7 +41,7 @@
 */
 @media (min-width: 768px) and (max-width: 1599px) {
   .header {
-    margin: 50px 150px 0;
+    padding: 25px 150px;
   }
 }
 
@@ -58,13 +58,19 @@
 */
 @media only screen and (min-width: 1600px) {
   .header {
-    margin: 80px 300px 0;
+    padding: 20px 300px;
   }
 }
 
 /* Стили, которые совпадают на всех устройствах и во всех ориентациях.*/
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  background: #edf2f4;
 }

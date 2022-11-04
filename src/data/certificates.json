@@ -2,79 +2,79 @@
   {
     "id": 1,
     "title": "HTML-верстка: с нуля до первого макета",
-    "link": "./HTML-верстка с нуля до первого макета.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/HTML-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0%20%D1%81%20%D0%BD%D1%83%D0%BB%D1%8F%20%D0%B4%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D0%B0.pdf",
     "year": "2020"
   },
   {
     "id": 2,
     "title": "Адаптивная и мобильная верстка",
-    "link": "./Адаптивная и мобильная верстка.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%90%D0%B4%D0%B0%D0%BF%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%B8%20%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0.pdf",
     "year": "2020"
   },
   {
     "id": 3,
     "title": "Основы программирования",
-    "link": "./Основы программирования.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.pdf",
     "year": "2020"
   },
   {
     "id": 4,
     "title": "GIT - система контроля версий",
-    "link": "./GIT-система контроля версий.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/GIT-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B9.pdf",
     "year": "2020"
   },
   {
     "id": 5,
     "title": "Основы JavaScript",
-    "link": "./Основы JavaScript.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20JavaScript.pdf",
     "year": "2020"
   },
   {
     "id": 6,
     "title": "Основы JavaScript в браузере",
-    "link": "./Основы JavaScript в браузере.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20JavaScript%20%D0%B2%20%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B5.pdf",
     "year": "2020"
   },
   {
     "id": 7,
     "title": "Продвинутый JavaScript: современные возможности языка",
-    "link": "./Продвинутый JavaScript современные возможности языка.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9F%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%83%D1%82%D1%8B%D0%B9%20JavaScript%20%D1%81%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0.pdf",
     "year": "2020"
   },
   {
     "id": 8,
     "title": "React: библиотека №1 в современной фронтенд-разработке",
-    "link": "./React библиотека №1 в современной фронтенд-разработке.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/React%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%20%E2%84%961%20%D0%B2%20%D1%81%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5.pdf",
     "year": "2021"
   },
   {
     "id": 9,
     "title": "Основы PHP",
-    "link": "./Основы PHP.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20PHP.pdf",
     "year": "2021"
   },
   {
     "id": 10,
     "title": "Продвинутый PHP",
-    "link": "./Продвинутый PHP.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9F%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%83%D1%82%D1%8B%D0%B9%20PHP.pdf",
     "year": "2021"
   },
   {
     "id": 11,
     "title": "Фреймворк Laravel",
-    "link": "./Фреймворк Laravel.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%A4%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%20Laravel.pdf",
     "year": "2021"
   },
   {
     "id": 12,
     "title": "Продвинутый JavaScript в браузере",
-    "link": "./Продвинутый JavaScript в браузере.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%9F%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%83%D1%82%D1%8B%D0%B9%20JavaScript%20%D0%B2%20%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B5.pdf",
     "year": "2021"
   },
   {
     "id": 13,
     "title": "Веб-разработчик с нуля",
-    "link": "./Веб-разработчик с нуля.pdf",
+    "link": "https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/certificates/%D0%92%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%20%D1%81%20%D0%BD%D1%83%D0%BB%D1%8F.pdf",
     "year": "2022"
   }
 ]

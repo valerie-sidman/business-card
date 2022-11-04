@@ -10,7 +10,7 @@
   .menu-list__mobile--active {
     position: absolute;
     z-index: 1;
-    top: 115px;
+    top: 109px;
     left: 30px;
     right: 30px;
 
@@ -21,11 +21,11 @@
 
     height: 321px;
     padding: 70px 32px;
+    /*width: 100%;*/
 
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     background-color: #edf2f4;
-    box-shadow: -14px -14px 22.5px 2.5px rgba(255, 255, 255, 1),
-      14px 14px 22.5px 2.5px rgba(43, 45, 66, 0.07);
+    box-shadow: 14px 14px 22.5px 2.5px rgba(43, 45, 66, 0.09);
   }
 
   .menu-list__item--mobile {
