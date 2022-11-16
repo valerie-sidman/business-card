@@ -6,7 +6,7 @@ import portfolio from '../../data/portfolio.json';
 export default function Portfolio() {
   return (
     <React.Fragment>
-      <div className="portfolio">
+      <div id="portfolio" className="section portfolio">
         <h2 className="portfolio-title">Portfolio</h2>
         <ul className="portfolio-list">
           {portfolio.map((project) => {

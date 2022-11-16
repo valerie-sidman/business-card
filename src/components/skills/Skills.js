@@ -39,7 +39,7 @@ export default function Skills() {
 
   return (
     <React.Fragment>
-      <div className="skills">
+      <div id="skills" className="section skills">
         <h2 className="skills-title">Skills and tools</h2>
         <div className="skills-container">
           <button className="skills-button__back" onClick={handleScrollBack}>
@@ -62,7 +62,6 @@ export default function Skills() {
         </div>
         <div className="skills-progress-bar-container">
           <div
-            id="portfolio-anchor"
             className="skills-progress-bar-content"
             style={
             {

@@ -3,7 +3,8 @@ import {
   SCROLLING_SKILL_LIST_ITEMS,
   ADD_SKILL_ITEM_ID,
   TRACKING_WINDOW_WIDTH,
-  HANDLE_MENU_ITEM_STATE
+  HANDLE_MENU_ITEM_STATE,
+  CHECKING_CLICK_ON_MENU
 } from './actionTypes';
 
 // Menu button
@@ -42,5 +43,13 @@ export function handleMenuItemState(name) {
   return {
     type: HANDLE_MENU_ITEM_STATE,
     payload: { name }
+  }
+}
+
+// Checking click on menu
+export function checkingClickOnMenu(clicked) {
+  return {
+    type: CHECKING_CLICK_ON_MENU,
+    payload: { clicked }
   }
 }

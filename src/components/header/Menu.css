@@ -108,6 +108,10 @@
   color: #8d99ae;
 }
 
+.menu-list__item-text {
+  cursor: pointer;
+}
+
 .menu-list__item--active {
   color: #edf2f4;
   background-color: #8d99ae;

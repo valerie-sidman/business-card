@@ -1,9 +1,11 @@
 import {
-  HANDLE_MENU_ITEM_STATE
+  HANDLE_MENU_ITEM_STATE,
+  CHECKING_CLICK_ON_MENU
 } from '../actions/actionTypes';
 
 const initialState = {
-  name: "Home",
+  name: "home",
+  clicked: false
 }
 
 export default function menuItemStateReducer(state = initialState, action) {
@@ -12,7 +14,13 @@ export default function menuItemStateReducer(state = initialState, action) {
       const {name} = action.payload;
       return {
         ...state,
-        name: name
+        name: name,
+      }
+    case CHECKING_CLICK_ON_MENU:
+      const {clicked} = action.payload;
+      return {
+        ...state,
+        clicked: clicked
       }
     default:
       return state;

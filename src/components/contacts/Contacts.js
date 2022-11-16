@@ -5,7 +5,7 @@ import contacts from '../../data/contacts.json';
 export default function Contacts() {
   return (
     <React.Fragment>
-      <div id="contacts-anchor" className="contacts">
+      <div id="contacts" className="section contacts">
         <h2 className="contacts-title">Contacts</h2>
         <div className="contacts-container">
           <div className="contacts-text__information">
