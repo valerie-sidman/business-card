@@ -1,45 +1,80 @@
 // noinspection HtmlUnknownAnchorTarget
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MenuButton from "./MenuButton";
 import './Menu.css';
-import { changeTypeMenuButton, handleMenuItemState } from '../../actions/actionCreators';
+import { changeTypeMenuButton, handleMenuItemState, checkingClickOnMenu } from '../../actions/actionCreators';
 
 export default function Menu() {
+  let scrollTimeout;
   const { type } = useSelector(state => state.serviceMenuButtonState);
-  const { name } = useSelector(state => state.serviceMenuItemState);
+  const { name, clicked } = useSelector(state => state.serviceMenuItemState);
   const dispatch = useDispatch();
   const handleChange = (e) => {
     if (e.currentTarget.parentElement.classList.contains("menu-list__mobile--active")) {
       dispatch(changeTypeMenuButton());
     }
   }
-  const changeColor = (menuItem) => {
+  const selectSection = (menuItem) => {
+    dispatch(checkingClickOnMenu(true));
     dispatch(handleMenuItemState(menuItem));
   }
+
+  const handleScrolling = useCallback(() => {
+    clearTimeout(scrollTimeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    scrollTimeout = setTimeout(function() {
+      dispatch(checkingClickOnMenu(false));
+    }, 50);
+    if (!clicked) {
+      const sections = document.querySelectorAll('.section');
+      let current = '';
+      for (let section of sections) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= 0 && window.scrollY <= 200) {
+          current = "home";
+          break;
+        }
+        if (window.scrollY >= (sectionTop - sectionHeight)) {
+          current = section.getAttribute('id');
+        }
+      }
+      dispatch(handleMenuItemState(current));
+    }
+  }, [clicked]);
+
   useEffect(() => {
-    dispatch(handleMenuItemState("#"));
-  }, [dispatch])
+    const yOffset = -130;
+    const element = document.getElementById(name);
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
+    window.addEventListener('scroll', handleScrolling)
+    return () => {
+      window.removeEventListener("scroll", handleScrolling);
+    };
+  }, [dispatch, name, clicked, handleScrolling])
+
   return (
     <React.Fragment>
       <MenuButton />
-      <ul className={type === 'dots' ? "menu-list menu-list__mobile--inactive" : "menu-list menu-list__mobile--active"}>
+      <ul className=  {type === 'dots' ? "menu-list menu-list__mobile--inactive" : "menu-list menu-list__mobile--active"}>
         <li className="menu-list__item menu-list__item--mobile" onClick={handleChange}>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a className={name === "#" ? "menu-list__item--active" : "menu-list__item--inactive"} href="#" onClick={() => changeColor("#")}>Home</a>
+          <span className={name === "home" ? "menu-list__item-text menu-list__item--active" : "menu-list__item-text menu-list__item--inactive"} onClick={() => selectSection("home")}>Home</span>
         </li>
         <li className="menu-list__item menu-list__item--mobile" onClick={handleChange}>
-          <a className={name === "#about-anchor" ? "menu-list__item--active" : "menu-list__item--inactive"} href="#about-anchor" onClick={() => changeColor("#about-anchor")}>About</a>
+          <span className={name === "about" ? "menu-list__item-text menu-list__item--active" : "menu-list__item-text menu-list__item--inactive"} onClick={() => selectSection("about")}>About</span>
         </li>
         <li className="menu-list__item menu-list__item--mobile" onClick={handleChange}>
-          <a className={name === "#skills-anchor" ? "menu-list__item--active" : "menu-list__item--inactive"} href="#skills-anchor" onClick={() => changeColor("#skills-anchor")}>Skills and tools</a>
+          <span className={name === "skills" ? "menu-list__item-text menu-list__item--active" : "menu-list__item-text menu-list__item--inactive"} onClick={() => selectSection("skills")}>Skills and tools</span>
         </li>
         <li className="menu-list__item menu-list__item--mobile" onClick={handleChange}>
-          <a className={name === "#portfolio-anchor" ? "menu-list__item--active" : "menu-list__item--inactive"} href="#portfolio-anchor" onClick={() => changeColor("#portfolio-anchor")}>Portfolio</a>
+          <span className={name === "portfolio" ? "menu-list__item-text menu-list__item--active" : "menu-list__item-text menu-list__item--inactive"} onClick={() => selectSection("portfolio")}>Portfolio</span>
         </li>
         <li className="menu-list__item menu-list__item--mobile" onClick={handleChange}>
-          <a className={name === "#contacts-anchor" ? "menu-list__item--active" : "menu-list__item--inactive"} href="#contacts-anchor" onClick={() => changeColor("#contacts-anchor")}>Contacts</a>
+          <span className={name === "contacts" ? "menu-list__item-text menu-list__item--active" : "menu-list__item-text menu-list__item--inactive"} onClick={() => selectSection("contacts")}>Contacts</span>
         </li>
       </ul>
     </React.Fragment>
