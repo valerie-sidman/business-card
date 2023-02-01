@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import photo from "../../images/photo_500x500.png";
-import resume from '../../data/resume.pdf';
+import resume from 'https://raw.githubusercontent.com/valerie-sidman/business-card/master/src/data/resume.pdf';
 
 export default function About() {
   return (
